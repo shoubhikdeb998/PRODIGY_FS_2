@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Update Employee</h2>
+    <form method="POST">
+        Name: <input type="text" name="name" value="{{ employee[1] }}" required><br/>
+        Position: <input type="text" name="position" value="{{ employee[2] }}" required><br/>
+        Department: <input type="text" name="department" value="{{ employee[3] }}" required><br/>
+        <input type="submit" value="Update">
+    </form>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
